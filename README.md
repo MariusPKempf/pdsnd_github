@@ -48,6 +48,8 @@ Learning more about DATETIME and IDXMAX
 Reach out to me at one of the following places!
 marius@googlemail.com
 mariuskempf.com
+Tel.: +49 178 123 456 789
+Linkedin: https://www.linkedin.com/in/marius-kempf
 
 
 ### Donations

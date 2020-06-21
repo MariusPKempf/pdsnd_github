@@ -36,17 +36,6 @@ def get_filters():
         else:
             print("\n" + "Sorry, I did not get that. Please try again! \nHint: Be aware of correct spelling.\n")
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    """Get user input for day of week (Monday, Tuesday, Wednesday, Tursday, Friday, Saturday, Sunday) or let her choose 'all' if no filter should be applied."""
-    while True:
-        day = input("\nPlease type the day of week for which you would like to get data (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday)...\n...or type \'all\' if you want data irrespective of the day of week.\n").lower()
-        if day in ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all'):
-            break
-        else:
-            print("\n" + "Sorry, I did not get that. Please try again! \nHint: Be aware of correct spelling.\n")
-
-
-
     print('-'*40)
     print()
     print("You chose {} as a filter for city, {} as a filter for month, and {} as a filter for day of week.".format(city.upper(), month.upper(), day.upper()))

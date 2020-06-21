@@ -44,13 +44,13 @@ Learning more about DATETIME and IDXMAX
 	https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.idxmax.html	
 	https://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.idxmax.html"""
 
-###Support
+### Support
 Reach out to me at one of the following places!
 marius@googlemail.com
 mariuskempf.com
 
 
-###Donations
+### Donations
 Donations for this project are welcome. Get in touch with me if you are interested in supporting this project!
 
 

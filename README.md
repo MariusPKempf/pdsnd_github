@@ -50,3 +50,7 @@ marius@googlemail.com
 mariuskempf.com
 
 
+###Donations
+Donations for this project are welcome. Get in touch with me if you are interested in supporting this project!
+
+

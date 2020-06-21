@@ -16,8 +16,8 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!\n')
-    
-    
+
+
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     """Get user input for city (Chicago, New York City, Washington)"""
     while True:
@@ -25,7 +25,7 @@ def get_filters():
         if city in ('chicago', 'new york city', 'washington'):
             break
         else:
-            print("\n" + "Sorry, I did not get that. Please try again! \nHint: Be aware of correct spelling.\n")            
+            print("\n" + "Sorry, I did not get that. Please try again! \nHint: Be aware of correct spelling.\n")
 
     # TO DO: get user input for month (all, january, february, ... , june)
     """Get user input for month (January, February, March, April, May, June) or let her choose 'all' if no filter should be applied."""
@@ -46,7 +46,7 @@ def get_filters():
             print("\n" + "Sorry, I did not get that. Please try again! \nHint: Be aware of correct spelling.\n")
 
 
-            
+
     print('-'*40)
     print()
     print("You chose {} as a filter for city, {} as a filter for month, and {} as a filter for day of week.".format(city.upper(), month.upper(), day.upper()))
@@ -129,17 +129,17 @@ def station_stats(df):
     """display most commonly used start station"""
     most_common_start_station = df['Start Station'].value_counts().idxmax('index')
     print("Most commonly used start station:   ", most_common_start_station)
-    
+
     # TO DO: display most commonly used end station
     """display most commonly used end station"""
     most_common_end_station = df['End Station'].value_counts().idxmax('index')
     print("Most commonly used end   station:   ", most_common_end_station)
-    
+
     # TO DO: display most frequent combination of start station and end station trip
     """display most frequent combination of start station and end station"""
     most_common_combination_station = df.groupby(['Start Station',  'End Station']).count()
     print("Most commonly occuring combination:  {} - {}".format(most_common_start_station, most_common_end_station))
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -179,7 +179,7 @@ def user_stats(df):
         print("\n" + "Counts of user types:\n", counts_of_user_types)
     except KeyError:
         print("\n" + "Counts of user types:      No data available for this filter.")
-        
+
     # TO DO: Display counts of gender
     """"Displaying counts of gender; use 'try' to account for possibly missing data in the table"""
     try:
@@ -215,10 +215,10 @@ def user_stats(df):
 
 def raw_data2(df):
     """Displays rows of raw data as according to user input."""
-    
+
     while True:
         try:
-            raw_data = int(input("How many rows of raw data would you like to see? (Type \'0\' if you do not want to see any raw data): ")) 
+            raw_data = int(input("How many rows of raw data would you like to see? (Type \'0\' if you do not want to see any raw data): "))
         except ValueError:
             print("\n" + "Sorry, this is not a valid input. Please try again! \nHint: Be aware that only integers are allowed here.\n")
             continue
@@ -231,7 +231,7 @@ def raw_data2(df):
             print(df.head(int(raw_data)))
             break
 
-    
+
 def main():
 
     while True:
@@ -242,7 +242,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-     
+
         raw_data2(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
@@ -251,38 +251,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
-    
-"""readme.txt
-
-Learning more about RETURN
-	https://www.programiz.com/python-programming/methods/list/index
-Learning more about the STATISTICS program and MEAN
-	https://docs.python.org/3.4/library/statistics.html
-Learning more about VALUE_COUNTS
-	https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html
-Learning more about RETURN
-	https://www.geeksforgeeks.org/python-return-statement/
-	https://docs.python.org/3/howto/instrumentation.html?highlight=return#c.python.function.return
-Learning more about TRY, EXCEPT
-	https://docs.python.org/3/tutorial/errors.html
-	https://geek-university.com/python/the-try-except-else-statements/
-	https://www.youtube.com/watch?v=s4EvS91sx74
-	https://www.youtube.com/watch?v=NIWwJbo-9_8
-Learning more about KEYERROR and INDENTATIONERROR
-	https://realpython.com/python-keyerror/#the-general-solution-try-except
-	https://wiki.python.org/moin/KeyError
-	https://www.edureka.co/community/49336/python-error-indentationerror-expected-an-indented-block
-    https://docs.python.org/3/tutorial/errors.html
-https://github.com/SadiqAlreemi/Explore-US-Bikeshare-Data/blob/master/Python_Project.py
-		used this as I could not find an indentation error for hours and used this code to compare the "load data passage" of my code; 
-		also compared to this when I struggled with the most common trip combination to compare to my code; 
-Learning more about WHILE TRUE LOOPS
-	https://realpython.com/python-while-loop/
-Learning more about DATETIME and IDXMAX
-	https://docs.python.org/3/library/datetime.html
-	https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.idxmax.html	
-	https://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.idxmax.html
-Learning more about ISINSTANCE
-    https://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response
-    https://docs.python.org/3/library/functions.html"""
